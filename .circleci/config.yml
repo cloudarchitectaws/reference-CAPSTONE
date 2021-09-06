@@ -65,7 +65,7 @@ jobs:
              SUDO="sudo"
              fi
              $SUDO mv eksctl_download/eksctl /usr/local/bin/
-             sivadir eksctl_download
+             rmdir eksctl_download
        - aws-eks/create-cluster:
            cluster-name: << parameters.cluster-name >>
            skip-kubectl-install: false
